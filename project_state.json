@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "SnapCut AI is a web-based AI background removal platform. Users upload an image and get the background removed in one click. Built with React frontend, n8n backend automation, third-party AI API for background removal, and Cloudinary for storage. Includes free/paid plans and pay-per-use credits.",
+  "architectural_notes": [
+    "Frontend: React web app",
+    "Backend: n8n workflow automation",
+    "AI API: Third-party background removal service",
+    "Storage: Cloudinary (temporary, files deleted after processing)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Abstract dark tech hero background with subtle electric-green glowing light streaks on near-black (#0D0D0D) surface, cinematic, high-tech feel (hero-bg.dim_1920x1080.png)\n- SnapCut AI brand logo mark: stylized sharp scissors silhouette in white with a glowing electric-green AI spark/lightning bolt accent, minimal flat design on transparent background (logo-mark.dim_256x256.png)\n- Illustrated upload step icon: upward arrow entering a cloud outline, white line-art on dark background with green accent (step-upload.dim_128x128.png)\n- Illustrated AI processing step icon: abstract brain or chip with circuit lines and green pulse, white line-art on dark background (step-ai.dim_128x128.png)\n- Illustrated download step icon: downward arrow exiting a frame with transparent checkerboard corners, white line-art on dark background with green accent (step-download.dim_128x128.png)",
+  "existing_features": [
+    {
+      "id": "feature-design-and-apply-a-cohesive-visual-theme-across-the-entire-site-inspired-by-a-dark-modern-ai-tech-aesthetic-deep-charcoal-near-black-backgrounds-0d0d0d-141414-vivid-electric-green-accents-00ff87-or-similar-clean-sans-serif-typography-subtle-glassmorphism-cards-and-smooth-gradient-highlights-this-palette-and-style-must-be-consistent-on-every-page",
+      "title": "Design and apply a cohesive visual theme across the entire site inspired by a dark, modern AI-tech aesthetic: deep charcoal/near-black backgrounds (#0D0D0D, #141414), vivid electric green accents (#00FF87 or similar), clean sans-serif typography, subtle glassmorphism cards, and smooth gradient highlights. This palette and style must be consistent on every page.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-responsive-landing-page-home-with-a-hero-section-featuring-the-snapcut-ai-brand-name-logo-area-a-compelling-headline-remove-backgrounds-in-one-click-a-short-sub-headline-and-a-prominent-cta-button-try-it-free-upload-now-that-scrolls-to-the-upload-tool-include-a-how-it-works-section-3-steps-upload-ai-removes-background-download-a-features-section-highlighting-6-key-features-one-click-removal-drag-and-drop-multiple-formats-transparent-png-output-fast-processing-secure-handling-a-target-audience-section-and-a-footer-with-brand-name-and-nav-links",
+      "title": "Build a responsive landing page (Home) with: a hero section featuring the SnapCut AI brand name/logo area, a compelling headline ('Remove Backgrounds in One Click'), a short sub-headline, and a prominent CTA button ('Try It Free — Upload Now') that scrolls to the upload tool. Include a 'How It Works' section (3 steps: Upload → AI Removes Background → Download), a Features section highlighting 6 key features (one-click removal, drag-and-drop, multiple formats, transparent PNG output, fast processing, secure handling), a Target Audience section, and a footer with brand name and nav links.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-fully-functional-background-removal-tool-section-page-with-a-drag-and-drop-upload-zone-that-also-supports-click-to-browse-accepted-formats-jpg-png-webp-a-file-size-limit-of-10mb-an-animated-processing-state-after-upload-a-side-by-side-or-toggle-before-after-preview-of-the-original-and-result-images-a-remove-background-action-button-and-a-download-png-button-that-triggers-download-of-the-result-as-a-transparent-png-the-background-removal-must-be-simulated-on-the-frontend-using-a-canvas-based-approach-remove-white-near-white-pixels-or-apply-a-chroma-key-style-effect-since-no-external-ai-api-is-available-in-this-environment",
+      "title": "Build a fully functional background removal tool section/page with: a drag-and-drop upload zone that also supports click-to-browse; accepted formats JPG, PNG, WEBP; a file size limit of 10MB; an animated processing state after upload; a side-by-side or toggle before/after preview of the original and result images; a 'Remove Background' action button; and a 'Download PNG' button that triggers download of the result as a transparent PNG. The background removal must be simulated on the frontend using a canvas-based approach (remove white/near-white pixels or apply a chroma-key style effect) since no external AI API is available in this environment.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-pricing-page-accessible-via-the-navigation-bar-with-three-plan-tiers-1-free-5-removals-day-standard-quality-no-credit-card-required-2-pro-9-99-month-unlimited-removals-hd-quality-priority-processing-3-business-29-99-month-unlimited-removals-api-access-bulk-processing-dedicated-support-each-plan-card-must-show-the-plan-name-price-feature-list-and-a-cta-button-highlight-the-pro-plan-as-most-popular-include-a-pay-per-use-note-need-more-buy-credits-0-10-per-image",
+      "title": "Build a Pricing page accessible via the navigation bar with three plan tiers: (1) Free — 5 removals/day, standard quality, no credit card required; (2) Pro — $9.99/month, unlimited removals, HD quality, priority processing; (3) Business — $29.99/month, unlimited removals, API access, bulk processing, dedicated support. Each plan card must show the plan name, price, feature list, and a CTA button. Highlight the Pro plan as 'Most Popular'. Include a pay-per-use note: 'Need more? Buy credits — $0.10 per image.'",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-persistent-top-navigation-bar-with-the-snapcut-ai-logo-brand-mark-on-the-left-navigation-links-home-tool-pricing-faq-and-a-get-started-cta-button-on-the-right-the-navbar-must-be-sticky-fixed-on-scroll-and-collapse-into-a-hamburger-menu-on-mobile",
+      "title": "Add a persistent top navigation bar with: the SnapCut AI logo/brand mark on the left, navigation links ('Home', 'Tool', 'Pricing', 'FAQ'), and a 'Get Started' CTA button on the right. The navbar must be sticky (fixed on scroll) and collapse into a hamburger menu on mobile.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-basic-faq-section-page-with-at-least-6-common-questions-and-answers-covering-what-formats-are-supported-how-long-processing-takes-whether-images-are-stored-what-the-free-plan-includes-how-to-upgrade-and-data-privacy-deletion-policy",
+      "title": "Add a basic FAQ section/page with at least 6 common questions and answers covering: what formats are supported, how long processing takes, whether images are stored, what the free plan includes, how to upgrade, and data privacy/deletion policy.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-a-simple-usage-counter-in-the-motoko-backend-actor-to-track-total-background-removal-operations-processed-by-the-platform-anonymous-aggregate-count-only-no-user-data-expose-a-query-method-gettotalprocessed-async-nat-and-an-update-method-recordprocessed-async-display-the-live-count-on-the-landing-page-hero-section-as-a-social-proof-stat-e-g-x-images-processed",
+      "title": "Store a simple usage counter in the Motoko backend actor to track total background removal operations processed by the platform (anonymous aggregate count only — no user data). Expose a query method `getTotalProcessed() : async Nat` and an update method `recordProcessed() : async ()`. Display the live count on the landing page hero section as a social proof stat (e.g., 'X images processed').",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-render-the-following-static-image-assets-a-snapcut-ai-hero-background-abstract-dark-tech-texture-with-subtle-green-light-streaks-a-brand-logo-mark-stylized-scissors-with-a-green-ai-spark-and-three-illustrative-icons-for-the-how-it-works-steps-upload-icon-ai-processing-icon-download-icon-serve-all-images-from-frontend-public-assets-generated",
+      "title": "Generate and render the following static image assets: a SnapCut AI hero background (abstract dark tech texture with subtle green light streaks), a brand logo mark (stylized scissors with a green AI spark), and three illustrative icons for the 'How It Works' steps (upload icon, AI processing icon, download icon). Serve all images from `frontend/public/assets/generated`.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "One-click AI background removal with drag-and-drop upload",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Instant preview of result before download",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Support for multiple image formats and high-quality transparent PNG output",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Pricing/plans page with free tier (daily limits), monthly subscription, pay-per-use credits, and business API access",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Secure image handling: no permanent storage, delete after processing",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "SnapCut AI",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

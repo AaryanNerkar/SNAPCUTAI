@@ -1,0 +1,207 @@
+{
+  "kind": "build_request",
+  "title": "SnapCut AI — Full-Stack Background Removal Platform",
+  "projectName": "SnapCut AI",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Design and apply a cohesive visual theme across the entire site inspired by a dark, modern AI-tech aesthetic: deep charcoal/near-black backgrounds (#0D0D0D, #141414), vivid electric green accents (#00FF87 or similar), clean sans-serif typography, subtle glassmorphism cards, and smooth gradient highlights. This palette and style must be consistent on every page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "on the basis of this logo take the background colour and generate website fully functional"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Global CSS/Tailwind config uses the dark background and electric-green accent throughout",
+        "All cards, buttons, and nav elements follow the same theme",
+        "No page breaks the established color and typography system"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build a responsive landing page (Home) with: a hero section featuring the SnapCut AI brand name/logo area, a compelling headline ('Remove Backgrounds in One Click'), a short sub-headline, and a prominent CTA button ('Try It Free — Upload Now') that scrolls to the upload tool. Include a 'How It Works' section (3 steps: Upload → AI Removes Background → Download), a Features section highlighting 6 key features (one-click removal, drag-and-drop, multiple formats, transparent PNG output, fast processing, secure handling), a Target Audience section, and a footer with brand name and nav links.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "generate website fully functional",
+          "One-click background removal",
+          "Drag-and-drop upload system",
+          "Fast processing speed",
+          "Secure image handling"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section renders with headline, sub-headline, and CTA button",
+        "CTA scrolls to the upload tool section",
+        "'How It Works' section shows 3 numbered steps",
+        "Features section shows 6 feature cards",
+        "Footer renders with nav links and brand name",
+        "Page is fully responsive on mobile, tablet, and desktop"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build a fully functional background removal tool section/page with: a drag-and-drop upload zone that also supports click-to-browse; accepted formats JPG, PNG, WEBP; a file size limit of 10MB; an animated processing state after upload; a side-by-side or toggle before/after preview of the original and result images; a 'Remove Background' action button; and a 'Download PNG' button that triggers download of the result as a transparent PNG. The background removal must be simulated on the frontend using a canvas-based approach (remove white/near-white pixels or apply a chroma-key style effect) since no external AI API is available in this environment.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Users only need to upload an image and click one button",
+          "Drag-and-drop upload system",
+          "Instant preview before download",
+          "Support for multiple image formats",
+          "High-quality transparent output"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Drag-and-drop and click-to-browse both work for image upload",
+        "JPG, PNG, and WEBP files are accepted; invalid types show an error",
+        "Files over 10MB are rejected with an error message",
+        "An animated loader/spinner appears during processing",
+        "Before/after preview renders showing original and processed image",
+        "Download button triggers download of the result as a PNG file",
+        "The section is accessible from the landing page CTA"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Build a Pricing page accessible via the navigation bar with three plan tiers: (1) Free — 5 removals/day, standard quality, no credit card required; (2) Pro — $9.99/month, unlimited removals, HD quality, priority processing; (3) Business — $29.99/month, unlimited removals, API access, bulk processing, dedicated support. Each plan card must show the plan name, price, feature list, and a CTA button. Highlight the Pro plan as 'Most Popular'. Include a pay-per-use note: 'Need more? Buy credits — $0.10 per image.'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Free plan with daily limits",
+          "Paid monthly subscriptions",
+          "Pay-per-use credits",
+          "Business API access"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Three plan cards render: Free, Pro, Business",
+        "Correct pricing and feature lists are displayed for each plan",
+        "Pro plan has a 'Most Popular' badge",
+        "Pay-per-use note is visible on the pricing page",
+        "CTA buttons are present on each card",
+        "Page is accessible from the main navigation"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add a persistent top navigation bar with: the SnapCut AI logo/brand mark on the left, navigation links ('Home', 'Tool', 'Pricing', 'FAQ'), and a 'Get Started' CTA button on the right. The navbar must be sticky (fixed on scroll) and collapse into a hamburger menu on mobile.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "generate website fully functional"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navbar is visible and sticky on all pages",
+        "All nav links navigate to the correct sections/pages",
+        "'Get Started' button links to the upload tool",
+        "On mobile, nav collapses into a hamburger menu that opens/closes a drawer"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add a basic FAQ section/page with at least 6 common questions and answers covering: what formats are supported, how long processing takes, whether images are stored, what the free plan includes, how to upgrade, and data privacy/deletion policy.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Process images securely",
+          "Not store images permanently",
+          "Delete files after processing",
+          "Follow standard data protection practices"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 6 FAQ items are displayed",
+        "Each item is an expandable accordion with question and answer",
+        "FAQ is accessible from the navigation"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Store a simple usage counter in the Motoko backend actor to track total background removal operations processed by the platform (anonymous aggregate count only — no user data). Expose a query method `getTotalProcessed() : async Nat` and an update method `recordProcessed() : async ()`. Display the live count on the landing page hero section as a social proof stat (e.g., 'X images processed').",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Fast processing speed",
+          "To provide instant background removal"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend actor has `getTotalProcessed` and `recordProcessed` methods",
+        "Calling `recordProcessed` increments the counter",
+        "Frontend reads the counter via React Query and displays it on the hero section",
+        "Counter updates after each removal operation on the tool page"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Generate and render the following static image assets: a SnapCut AI hero background (abstract dark tech texture with subtle green light streaks), a brand logo mark (stylized scissors with a green AI spark), and three illustrative icons for the 'How It Works' steps (upload icon, AI processing icon, download icon). Serve all images from `frontend/public/assets/generated`.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "on the basis of this logo take the background colour and generate website fully functional"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero background image renders in the hero section",
+        "Logo mark renders in the navbar and hero",
+        "Three step icons render in the 'How It Works' section",
+        "All images load from /assets/generated path"
+      ]
+    }
+  ],
+  "constraints": [
+    "No external AI APIs (OpenAI, remove.bg, etc.) may be called — background removal must be implemented client-side using canvas",
+    "No external storage (Cloudinary, S3) — images are processed in-browser and never sent to a server",
+    "No real payment processing — pricing page is UI-only",
+    "Do not edit any file listed in frontend.immutablePaths",
+    "All Motoko logic must remain in the single backend/main.mo actor"
+  ],
+  "nonGoals": [
+    "Real AI/ML background removal via third-party API",
+    "User authentication or account management",
+    "Actual payment/subscription processing",
+    "Bulk image processing",
+    "Background replacement feature",
+    "Mobile application",
+    "n8n workflow automation integration",
+    "Cloudinary or any external file storage"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Abstract dark tech hero background with subtle electric-green glowing light streaks on near-black (#0D0D0D) surface, cinematic, high-tech feel (hero-bg.dim_1920x1080.png)",
+      "SnapCut AI brand logo mark: stylized sharp scissors silhouette in white with a glowing electric-green AI spark/lightning bolt accent, minimal flat design on transparent background (logo-mark.dim_256x256.png)",
+      "Illustrated upload step icon: upward arrow entering a cloud outline, white line-art on dark background with green accent (step-upload.dim_128x128.png)",
+      "Illustrated AI processing step icon: abstract brain or chip with circuit lines and green pulse, white line-art on dark background (step-ai.dim_128x128.png)",
+      "Illustrated download step icon: downward arrow exiting a frame with transparent checkerboard corners, white line-art on dark background with green accent (step-download.dim_128x128.png)"
+    ],
+    "edits": []
+  }
+}

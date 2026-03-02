@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Motoko actor that tracks a total processed count with a query to read it and a shared function to increment it.",
+  "feature_evidence.json": "Feature evidence report mapping implemented features (visual theme, landing page, background removal tool) to their source files, components, and test IDs.",
+  "frontend-file-summaries.txt": "JSON map of frontend source file paths to short human-readable summaries describing each file's purpose and key implementation details.",
+  "frontend/index.css": "Base Tailwind CSS file defining OKLCH design tokens for light and dark themes (backgrounds, foreground, primary, chart colors, sidebar) used by shadcn-ui components.",
+  "frontend/index.html": "Minimal HTML entry point for the React app, mounting the root div and loading the main TSX module.",
+  "frontend/src/App.tsx": "Root React component managing page state (home/pricing/faq) and rendering Navbar, the active page, and Footer, with smooth-scroll navigation to the upload tool.",
+  "frontend/src/components/BackgroundRemovalTool.tsx": "Interactive background removal tool component with drag-and-drop upload, file validation, animated processing state, before/after preview, and PNG download functionality.",
+  "frontend/src/components/Footer.tsx": "Site footer displaying the SnapCut AI brand, navigation links, copyright year, and a caffeine.ai attribution link with UTM tracking.",
+  "frontend/src/components/Navbar.tsx": "Sticky navigation bar with logo, desktop nav links with active state highlighting, a neon CTA button, and a mobile Sheet drawer menu.",
+  "frontend/src/hooks/useActor.ts": "React Query hook that creates and caches an ICP backend actor, using an anonymous or identity-authenticated actor depending on login state, and invalidates dependent queries when the actor changes.",
+  "frontend/src/hooks/useBackgroundRemoval.ts": "Custom React hook that manages background removal state (idle/loading/processing/done/error) and processes images client-side using canvas by sampling corner colors to detect and remove the background with soft edge blending.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an Internet Identity authentication context and provider for ICP, exposing login/logout functions, identity state, and login status via a React context hook backed by @dfinity/auth-client.",
+  "frontend/src/hooks/useQueries.ts": "Defines two React Query hooks: useGetTotalProcessed to fetch the total processed image count from the canister actor, and useRecordProcessed to mutate and increment that count.",
+  "frontend/src/index.css": "Global stylesheet that imports Google Fonts, configures Tailwind with a dark neon-green theme using OKLCH CSS variables, and defines custom utility classes for neon glow effects, glass cards, gradient text, and animations.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app with QueryClientProvider and InternetIdentityProvider wrapping the root App component.",
+  "frontend/src/pages/FAQ.tsx": "FAQ page component that renders a list of nine common questions and answers about SnapCut AI using an accordion UI component.",
+  "frontend/src/pages/Home.tsx": "Home page component featuring a hero section, the BackgroundRemovalTool, feature highlights, a how-it-steps section, and a target audience grid, with a live total-processed counter fetched from the canister.",
+  "frontend/src/pages/Pricing.tsx": "Renders the Pricing page with three plan tiers (Free, Pro, Business), displaying features, prices, and CTA buttons. Highlights the Pro plan as most popular with a neon-styled card.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration defining custom colors (neon, surface, semantic tokens via oklch), fonts (Inter, Space Grotesk), border radii, box shadows, and keyframe animations for the dark AI-tech theme.",
+  "project_state.json": "Tracks the overall SnapCut AI project state including architecture (React, n8n, Cloudinary), required image assets, and a list of implemented features with their requirement IDs and versions."
+}

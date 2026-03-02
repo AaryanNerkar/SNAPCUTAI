@@ -1,0 +1,13 @@
+{
+  "frontend/src/index.css": "Global CSS with SnapCut AI dark theme — deep charcoal backgrounds, electric-green (OKLCH) accent tokens, Space Grotesk/Inter fonts, neon glow utilities, glassmorphism card styles, checkerboard pattern, and animation keyframes.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with custom `neon`, `surface` color tokens, `display` font family (Space Grotesk), neon box-shadow utilities, and additional border-radius/animation tokens.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for backend integration — `useGetTotalProcessed` fetches the live processed count, `useRecordProcessed` mutation increments the counter and invalidates the cache.",
+  "frontend/src/hooks/useBackgroundRemoval.ts": "Custom hook managing canvas-based background removal state — captures the canvas 2D context into a local `const context` variable before the async chunk loop so TypeScript can guarantee non-null access when calling `context.putImageData`, fixing the TS18047 error.",
+  "frontend/src/components/Navbar.tsx": "Sticky top navigation bar with SnapCut AI logo, desktop nav links, mobile hamburger Sheet drawer, and a \"Get Started\" neon CTA button.",
+  "frontend/src/components/BackgroundRemovalTool.tsx": "Full-featured background removal tool with drag-and-drop upload zone, file validation (type/size), animated processing spinner with progress bar, side-by-side before/after preview with checkerboard transparency, and PNG download button.",
+  "frontend/src/pages/Home.tsx": "Landing page with hero section (headline, stats, live processed count), upload tool embed, How It Works (3 steps with icons), Features grid (6 cards), Target Audience pills, and CTA banner.",
+  "frontend/src/pages/Pricing.tsx": "Pricing page with three plan cards (Free, Pro with \"Most Popular\" badge, Business), feature lists, CTA buttons, and a pay-per-use credits note.",
+  "frontend/src/pages/FAQ.tsx": "FAQ page with 9 expandable accordion items covering formats, processing time, privacy, plans, and commercial use.",
+  "frontend/src/components/Footer.tsx": "Site footer with brand logo, nav links, copyright year, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/App.tsx": "Root app component managing page state (home/pricing/faq), rendering Navbar, page content, and Footer; handles navigation including smooth scroll to the upload tool."
+}

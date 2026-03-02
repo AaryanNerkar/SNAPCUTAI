@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* SnapCut AI Dark Theme - Electric Green on Deep Charcoal */
+    --background: 0.1 0 0;
+    --foreground: 0.95 0 0;
+    --card: 0.13 0 0;
+    --card-foreground: 0.95 0 0;
+    --popover: 0.15 0 0;
+    --popover-foreground: 0.95 0 0;
+    --primary: 0.82 0.18 155;
+    --primary-foreground: 0.08 0 0;
+    --secondary: 0.18 0 0;
+    --secondary-foreground: 0.9 0 0;
+    --muted: 0.16 0 0;
+    --muted-foreground: 0.55 0 0;
+    --accent: 0.82 0.18 155;
+    --accent-foreground: 0.08 0 0;
+    --destructive: 0.65 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.22 0 0;
+    --input: 0.2 0 0;
+    --ring: 0.82 0.18 155;
+
+    /* Custom tokens */
+    --neon: 0.82 0.18 155;
+    --neon-dim: 0.65 0.14 155;
+    --surface: 0.13 0 0;
+    --surface-raised: 0.17 0 0;
+    --surface-overlay: 0.2 0 0;
+
+    --chart-1: 0.82 0.18 155;
+    --chart-2: 0.7 0.15 200;
+    --chart-3: 0.6 0.12 240;
+    --chart-4: 0.75 0.16 120;
+    --chart-5: 0.65 0.14 80;
+
+    --sidebar: 0.12 0 0;
+    --sidebar-foreground: 0.9 0 0;
+    --sidebar-primary: 0.82 0.18 155;
+    --sidebar-primary-foreground: 0.08 0 0;
+    --sidebar-accent: 0.18 0 0;
+    --sidebar-accent-foreground: 0.9 0 0;
+    --sidebar-border: 0.22 0 0;
+    --sidebar-ring: 0.82 0.18 155;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .neon-text {
+    color: oklch(var(--neon));
+  }
+
+  .neon-glow {
+    text-shadow: 0 0 20px oklch(var(--neon) / 0.6), 0 0 40px oklch(var(--neon) / 0.3);
+  }
+
+  .neon-border {
+    border-color: oklch(var(--neon));
+    box-shadow: 0 0 12px oklch(var(--neon) / 0.3), inset 0 0 12px oklch(var(--neon) / 0.05);
+  }
+
+  .neon-btn {
+    background: oklch(var(--neon));
+    color: oklch(0.08 0 0);
+    font-weight: 700;
+    transition: all 0.2s ease;
+  }
+
+  .neon-btn:hover {
+    background: oklch(0.88 0.2 155);
+    box-shadow: 0 0 24px oklch(var(--neon) / 0.5), 0 0 48px oklch(var(--neon) / 0.25);
+    transform: translateY(-1px);
+  }
+
+  .glass-card {
+    background: oklch(var(--card) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid oklch(var(--border) / 0.6);
+  }
+
+  .glass-card-neon {
+    background: oklch(var(--card) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid oklch(var(--neon) / 0.25);
+    box-shadow: 0 0 20px oklch(var(--neon) / 0.08);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, oklch(0.95 0 0) 0%, oklch(var(--neon)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .checkerboard {
+    background-image:
+      linear-gradient(45deg, oklch(0.3 0 0) 25%, transparent 25%),
+      linear-gradient(-45deg, oklch(0.3 0 0) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, oklch(0.3 0 0) 75%),
+      linear-gradient(-45deg, transparent 75%, oklch(0.3 0 0) 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+    background-color: oklch(0.22 0 0);
+  }
+
+  .animate-pulse-neon {
+    animation: pulse-neon 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-neon {
+    0%, 100% { box-shadow: 0 0 8px oklch(var(--neon) / 0.4); }
+    50% { box-shadow: 0 0 24px oklch(var(--neon) / 0.7), 0 0 48px oklch(var(--neon) / 0.3); }
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent 0%, oklch(var(--neon) / 0.1) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+}
